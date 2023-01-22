@@ -21,4 +21,4 @@ jobs:
           git config user.name "GitHub Actions"
           echo "Last Published: $(date)" > published.md
           git commit -a -m "published"
-          git push origin main
+          git push origin ${GITHUB_REF##refs/heads/}
